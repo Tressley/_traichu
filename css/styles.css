@@ -1,0 +1,205 @@
+body {
+    background-color: var(--primary-background-color);
+    color: var(--primary-font-color);
+    font-family: var(--font-monospace);
+    font-size: var(--font-size-body);
+}
+
+main {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -webkit-animation: fade 0.75s ease-in;
+        animation: fade 0.75s ease-in;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    min-height: 100vh;
+    padding: var(--space-l);
+    row-gap: var(--space-l);
+}
+
+header {
+    -webkit-animation: flicker 2s linear infinite both;
+        animation: flicker 2s linear infinite both;
+}
+
+header svg { width: 8rem; }
+
+#dock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    list-style-type: none;
+    min-width: 40rem;
+    padding: 0;
+}
+
+#dock li a {
+    display: block;
+    fill: var(--primary-link-color);
+    min-width: 1.5rem;
+    -webkit-transition: fill 0.25s ease-in-out, margin-top 0.125s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -o-transition: fill 0.25s ease-in-out, margin-top 0.125s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+        transition: fill 0.25s ease-in-out, margin-top 0.125s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+#dock a:focus,
+#dock a:hover {
+    -webkit-animation: slime 0.75s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+        animation: slime 0.75s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    fill: var(--primary-link-hover-color);
+    margin-top: -0.25rem;
+    outline: none;
+}
+
+#dock li:nth-child(1) a:focus,
+#dock li:nth-child(1) a:hover { fill: hsl(5, 81%, 56%); } /* Gmail */
+#dock li:nth-child(2) a:focus,
+#dock li:nth-child(2) a:hover { fill: hsl(217, 89%, 61%); } /* Google Calendar */
+#dock li:nth-child(3) a:focus,
+#dock li:nth-child(3) a:hover { fill: hsl(44, 100%, 50%); } /* Google Keep */
+#dock li:nth-child(4) a:focus,
+#dock li:nth-child(4) a:hover { fill: var(--primary-link-hover-color); } /* Notion */
+#dock li:nth-child(5) a:focus,
+#dock li:nth-child(5) a:hover { fill: hsl(102, 53%, 52%); } /* Github */
+#dock li:nth-child(6) a:focus,
+#dock li:nth-child(6) a:hover { fill: hsl(14, 89%, 53%); } /* Figma */
+
+#search {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+        flex-direction: column;
+}
+
+#search input {
+    background-color: var(--primary-background-color);
+    background-position: right 1.25rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+    border-radius: 0.5rem;
+    color: var(--primary-font-color);
+    font-family: var(--font-sans-serif);
+    line-height: 1.5;
+    outline: 0.25rem solid transparent;
+    padding: var(--space-m);
+    width: 40rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    #search input {
+        background-image: var(--svg-search-gray);
+        border: 0.125rem solid hsl(var(--color-white-hsl) / 0.25);
+    }
+    
+    #search input:hover { border-color: hsl(var(--color-white-hsl) / 0.5); }
+    
+    #search input:focus {
+        background-color: hsl(var(--color-white-hsl) / 0.05);
+        background-image: var(--svg-search-light-gray);
+        outline-color: var(--color-orange);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    #search input {
+        background-image: var(--svg-search-light-gray);
+        border: 0.125rem solid hsl(var(--color-black-hsl) / 0.25);
+    } 
+
+    #search input:hover { border-color: hsl(var(--color-black-hsl) / 0.5); }
+    
+    #search input:focus {
+        background-color: var(--color-white);
+        background-image: var(--svg-search-gray);
+        outline-color: var(--color-orange);
+    }
+}
+
+#search input:active,
+#search input:focus { border-color: transparent; }
+
+#search input::-webkit-input-placeholder { text-align: center; }
+#search input::-moz-placeholder { text-align: center; }
+#search input:-ms-input-placeholder { text-align: center; }
+#search input::-ms-input-placeholder { text-align: center; }
+#search input::placeholder { text-align: center; }
+
+#bookmarks {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        width: 40rem;
+}
+
+#bookmarks ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#bookmarks li {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    line-height: 1;
+    margin-bottom: var(--space-m);
+}
+
+#bookmarks li:last-child { margin-bottom: 0; }
+
+#bookmarks li .favicon {
+    width: 1rem;
+    margin-right: var(--space-s);
+}
+
+#bookmarks a {
+    color: var(--primary-link-color);
+    text-decoration: none;
+    -webkit-transition: color 0.25s ease-in-out;
+        -o-transition: color 0.25s ease-in-out;
+        transition: color 0.25s ease-in-out;
+}
+
+#bookmarks a:focus,
+#bookmarks a:hover { color: var(--primary-link-hover-color); }
