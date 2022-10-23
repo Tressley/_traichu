@@ -6,6 +6,4 @@ function dateTime () {
   setTimeout(dateTime, 1000)
 }
 
-function traichu () {
-  dateTime()
-}
+dateTime()
