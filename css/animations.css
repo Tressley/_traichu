@@ -36,6 +36,16 @@
         100% { -webkit-filter: contrast(100%); filter: contrast(100%); -webkit-filter: grayscale(0%); filter: grayscale(0%); }
     }
 
+@-webkit-keyframes slide {
+    0% { -webkit-transform: translateX(0); transform: translateX(0); }
+    100% { -webkit-transform: translateX(-1200px); transform: translateX(-1200px); }
+}
+    
+    @keyframes slide {
+        0% { -webkit-transform: translateX(0); transform: translateX(0); }
+        100% { -webkit-transform: translateX(-1200px); transform: translateX(-1200px); }
+    }
+
 @-webkit-keyframes slime {
 	0% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
 	30% { -webkit-transform: scale3d(1.25, 0.75, 1); transform: scale3d(1.25, 0.75, 1); }

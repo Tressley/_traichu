@@ -24,12 +24,11 @@ main {
 }
 
 header {
-    animation: flicker 2s linear infinite both;
     display: flex;
     justify-content: center;
 }
 
-header svg { width: 6rem; }
+header img { width: 6rem; }
 
 #dock ul {
     display: flex;
@@ -53,7 +52,7 @@ header svg { width: 6rem; }
 #dock a:hover {
     animation: slime 0.75s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
     fill: var(--primary-link-hover-color);
-    margin-top: -0.25rem;
+    margin-top: -0.5rem;
     outline: none;
 }
 
@@ -170,7 +169,7 @@ header svg { width: 6rem; }
         width: 40rem;
     }
 
-    header svg { width: 8rem; }
+    header img { width: 8rem; }
 
     #dock ul {
         column-gap: 0;
@@ -180,3 +179,5 @@ header svg { width: 6rem; }
 
     #bookmarks { flex-direction: row; }
 }
+
+.slide { animation: slide 4250ms ease-in; }
