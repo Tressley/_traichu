@@ -21,7 +21,10 @@ var konamiCode = [
 var currentKey = 0
 var keyHandler = function (event) {
   // If the key isn't in the pattern, or isn't the current key in the pattern, reset
-  if (konamiCode.indexOf(event.key) < 0 || event.key !== konamiCode[currentKey]) {
+  if (
+    konamiCode.indexOf(event.key) < 0 ||
+    event.key !== konamiCode[currentKey]
+  ) {
     currentKey = 0
     return
   }
@@ -29,13 +32,13 @@ var keyHandler = function (event) {
   // Update how much of the pattern is complete
   currentKey++
 
-  // If complete, alert and reset
+  // If complete, add animation class and reset
   if (konamiCode.length === currentKey) {
     currentKey = 0
     document.getElementById('traichu-running').classList.add('slide')
     setTimeout(function () {
       document.getElementById('traichu-running').classList.remove('slide')
-    }, 4250);
+    }, 4250)
   }
 }
 
