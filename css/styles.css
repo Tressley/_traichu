@@ -28,7 +28,10 @@ header {
     justify-content: center;
 }
 
-header img { width: 6rem; }
+header img {
+    animation: fade 0.25s ease-in forwards;
+    width: 6rem;
+}
 
 #dock ul {
     display: flex;

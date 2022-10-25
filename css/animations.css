@@ -38,12 +38,12 @@
 
 @-webkit-keyframes slide {
     0% { -webkit-transform: translateX(0); transform: translateX(0); }
-    100% { -webkit-transform: translateX(-1200px); transform: translateX(-1200px); }
+    100% { -webkit-transform: translateX(-1600px); transform: translateX(-1600px); }
 }
     
     @keyframes slide {
         0% { -webkit-transform: translateX(0); transform: translateX(0); }
-        100% { -webkit-transform: translateX(-1200px); transform: translateX(-1200px); }
+        100% { -webkit-transform: translateX(-1600px); transform: translateX(-1600px); }
     }
 
 @-webkit-keyframes slime {
