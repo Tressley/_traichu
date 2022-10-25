@@ -44,7 +44,7 @@ header img { width: 6rem; }
 #dock a {
     display: block;
     fill: var(--primary-link-color);
-    min-width: 1.5rem;
+    width: 1.5rem;
     transition: fill 0.25s ease-in-out, margin-top 0.125s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
