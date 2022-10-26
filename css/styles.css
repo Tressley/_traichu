@@ -155,7 +155,7 @@ header img {
 
 .favicon {
     margin-right: var(--space-s);
-    min-width: 1rem;
+    width: 1rem;
 }
 
 #bookmarks a {
