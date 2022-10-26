@@ -45,7 +45,7 @@ header img {
 }
 
 #dock ul li {
-    transition: fill 0.25s ease-in-out, margin-top 0.125s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    transition: margin-top 0.125s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 #dock ul li:hover {
@@ -57,10 +57,12 @@ header img {
 #dock a {
     display: block;
     fill: var(--primary-link-color);
+    transition: fill 0.25s ease-in-out;
     width: 1.5rem;
 }
 
-#dock a:focus {
+#dock a:focus,
+#dock a:hover {
     fill: var(--primary-link-hover-color);
     outline: none;
 }
