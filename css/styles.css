@@ -44,18 +44,24 @@ header img {
     padding: 0;
 }
 
+#dock ul li {
+    transition: fill 0.25s ease-in-out, margin-top 0.125s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+#dock ul li:hover {
+    animation: slime 0.75s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    margin-top: -0.5rem;
+    outline: none;
+}
+
 #dock a {
     display: block;
     fill: var(--primary-link-color);
     width: 1.5rem;
-    transition: fill 0.25s ease-in-out, margin-top 0.125s cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
-#dock a:focus,
-#dock a:hover {
-    animation: slime 0.75s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+#dock a:focus {
     fill: var(--primary-link-hover-color);
-    margin-top: -0.5rem;
     outline: none;
 }
 
