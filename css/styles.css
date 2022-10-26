@@ -170,6 +170,7 @@ header img {
     transition: color 0.25s ease-in-out;
 }
 
+#bookmarks a:focus,
 #bookmarks a:hover { color: var(--primary-link-hover-color); }
 
 @media screen and (min-width: 48em) {
