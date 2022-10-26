@@ -14,7 +14,7 @@ main {
 }
 
 #traichu {
-    animation: fade 0.25s ease-in;
+    animation: fade 0.125s ease-in;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,10 +28,7 @@ header {
     justify-content: center;
 }
 
-header img {
-    animation: fade 0.25s ease-in forwards;
-    width: 6rem;
-}
+header img { width: 6rem; }
 
 #dock ul {
     display: flex;
