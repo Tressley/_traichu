@@ -1,5 +1,6 @@
 :root {
-    /* HSL(a) for better control over colors
+    /*
+    HSL(a) for better control over colors
     https://css-tricks.com/hsl-hsla-is-great-for-programmatic-color-control/
     https://css-tricks.com/color-alpha-anywhere/
     */
@@ -12,22 +13,21 @@
 
     /* Font-families */
     --font-monospace: "Inconsolata", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-	--font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 
     /* Font-sizing */
-	--font-size-body: 1rem; /* 16px */
+    --font-size-body: 1rem; /* 16px */
 
     /* Spacing */
-	--space-xs: 0.25rem; /* 4px */
-	--space-s: 0.5rem; /* 8px */
-	--space-m: 1rem;
-	--space-l: 2rem; /* 32px */
-	--space-xl: 4rem; /* 64px */
+    --space-xs: 0.25rem; /* 4px */
+    --space-s: 0.5rem; /* 8px */
+    --space-m: 1rem;
+    --space-l: 2rem; /* 32px */
+    --space-xl: 4rem; /* 64px */
 
     /* SVGs */
     --svg-search-gray: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iIzUyNTI1MiIgZD0iTTMyLDI5LjU4bC05LjQ3LTkuNDdjMS42LTIuMTEsMi41Ni00LjcyLDIuNTYtNy41NkMyNS4wOSw1LjYzLDE5LjQ2LDAsMTIuNTQsMFMwLDUuNjMsMCwxMi41NHM1LjYzLDEyLjU0LDEyLjU0LDEyLjU0YzIuODQsMCw1LjQ2LS45Niw3LjU2LTIuNTZsOS40Nyw5LjQ3LDIuNDItMi40MlpNMy40MiwxMi41NEMzLjQyLDcuNTEsNy41MSwzLjQyLDEyLjU0LDMuNDJzOS4xMiw0LjA4LDkuMTIsOS4xMi00LjA4LDkuMTItOS4xMiw5LjEyUzMuNDIsMTcuNTgsMy40MiwxMi41NFoiLz48L3N2Zz4=');
     --svg-search-light-gray: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iIzg3ODc4NyIgZD0iTTMyLDI5LjU4bC05LjQ3LTkuNDdjMS42LTIuMTEsMi41Ni00LjcyLDIuNTYtNy41NkMyNS4wOSw1LjYzLDE5LjQ2LDAsMTIuNTQsMFMwLDUuNjMsMCwxMi41NHM1LjYzLDEyLjU0LDEyLjU0LDEyLjU0YzIuODQsMCw1LjQ2LS45Niw3LjU2LTIuNTZsOS40Nyw5LjQ3LDIuNDItMi40MlpNMy40MiwxMi41NEMzLjQyLDcuNTEsNy41MSwzLjQyLDEyLjU0LDMuNDJzOS4xMiw0LjA4LDkuMTIsOS4xMi00LjA4LDkuMTItOS4xMiw5LjEyUzMuNDIsMTcuNTgsMy40MiwxMi41NFoiLz48L3N2Zz4=');
-    --svg-search-orange: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzIgMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI0ZEN0UwMCIgZD0iTTMyLDI5LjU4bC05LjQ3LTkuNDdjMS42LTIuMTEsMi41Ni00LjcyLDIuNTYtNy41NkMyNS4wOSw1LjYzLDE5LjQ2LDAsMTIuNTQsMFMwLDUuNjMsMCwxMi41NHM1LjYzLDEyLjU0LDEyLjU0LDEyLjU0YzIuODQsMCw1LjQ2LS45Niw3LjU2LTIuNTZsOS40Nyw5LjQ3LDIuNDItMi40MlpNMy40MiwxMi41NEMzLjQyLDcuNTEsNy41MSwzLjQyLDEyLjU0LDMuNDJzOS4xMiw0LjA4LDkuMTIsOS4xMi00LjA4LDkuMTItOS4xMiw5LjEyUzMuNDIsMTcuNTgsMy40MiwxMi41NFoiLz48L3N2Zz4=');
 }
 
 /* Dark Mode */
