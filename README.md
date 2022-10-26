@@ -1,7 +1,4 @@
-... ![_traichu](img/traichu-run.png) ...
-
 ## _traichu
-
 A simple, semantic start page built with HTML 5, CSS 3, and JavaScript.
 
 This start page utilizes [DuckDuckGo](https://duckduckgo.com)'s privacy-focused search, DuckDuckGo's Favico API and inline SVGs to handle the images (with the exception of the traichu sprite), flexbox, and an 8-point grid system to handle the layout, with all interactions being handled via JavaScript and CSS animation.
