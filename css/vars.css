@@ -1,14 +1,18 @@
 :root {
     /*
-    HSL(a) for better control over colors
+    Colors pulled from https://www.colordic.org/w
+
+    HSL(a) is used for better control over colors
     https://css-tricks.com/hsl-hsla-is-great-for-programmatic-color-control/
     https://css-tricks.com/color-alpha-anywhere/
     */
-    --color-black-hsl: 0 0% 11%; /* #1C1C1C */
+    --color-black-hsl: 60 22% 7%; /* #16160E */
     --color-black: hsl(var(--color-black-hsl));
-    --color-orange-hsl: 30 100% 50%; /* #FD7E00 */
+    --color-off-white-hsl: 60 4% 95%; /* #F3F3F2 */
+    --color-off-white: hsl(var(--color-off-white-hsl));
+    --color-orange-hsl: 26 100% 46%; /* #EC6800 */
     --color-orange: hsl(var(--color-orange-hsl));
-    --color-white-hsl: 0 0% 95%; /* #F1F1F1 */
+    --color-white-hsl: 60 100% 99%; /* #FFFFFC */
     --color-white: hsl(var(--color-white-hsl));
 
     /* Font-families */
@@ -36,14 +40,14 @@
         --primary-background-color: var(--color-black);
         --primary-font-color: var(--color-white);
         --primary-link-color: hsl(var(--color-white-hsl) / 0.5);
-        --primary-link-hover-color: var(--color-white);
+        --primary-link-hover-color: var(--color-orange);
     }
 }
 
 /* Light Mode */
 @media (prefers-color-scheme: light) {
     :root {
-        --primary-background-color: var(--color-white);
+        --primary-background-color: var(--color-off-white);
         --primary-font-color: hsl(var(--color-black-hsl) / 0.75);
         --primary-link-color: hsl(var(--color-black-hsl) / 0.75);
         --primary-link-hover-color: var(--color-orange);
