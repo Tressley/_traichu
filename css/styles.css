@@ -7,17 +7,17 @@ body {
 
 main {
     align-items: center;
-    animation: fade 0.25s ease-in;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #traichu {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: var(--spacing-l) var(--spacing-m) var(--spacing-m) var(--spacing-m);
     row-gap: var(--spacing-l);
     width: 20rem;
 }
@@ -28,7 +28,7 @@ header {
 }
 
 header img,
-header svg { height: 4rem; }
+header svg { height: 4.5rem; }
 
 #dock ul {
     display: flex;
@@ -54,18 +54,18 @@ header svg { height: 4rem; }
     outline: none;
 }
 
-#dock ul li:nth-child(1) a:focus,
-#dock ul li:nth-child(1) a:hover { fill: hsl(5, 81%, 56%); } /* Gmail */
-#dock ul li:nth-child(2) a:focus,
-#dock ul li:nth-child(2) a:hover { fill: hsl(217, 89%, 61%); } /* Google Calendar */
-#dock ul li:nth-child(3) a:focus,
-#dock ul li:nth-child(3) a:hover { fill: hsl(44, 100%, 50%); } /* Google Keep */
-#dock ul li:nth-child(4) a:focus,
-#dock ul li:nth-child(4) a:hover { fill: var(--primary-link-hover-color); } /* Notion */
-#dock ul li:nth-child(5) a:focus,
-#dock ul li:nth-child(5) a:hover { fill: hsl(102, 53%, 52%); } /* Github */
-#dock ul li:nth-child(6) a:focus,
-#dock ul li:nth-child(6) a:hover { fill: hsl(14, 89%, 53%); } /* Figma */
+#dock li:nth-child(1) a:focus,
+#dock li:nth-child(1) a:hover { fill: hsl(5, 81%, 56%); } /* Gmail */
+#dock li:nth-child(2) a:focus,
+#dock li:nth-child(2) a:hover { fill: hsl(217, 89%, 61%); } /* Google Calendar */
+#dock li:nth-child(3) a:focus,
+#dock li:nth-child(3) a:hover { fill: hsl(44, 100%, 50%); } /* Google Keep */
+#dock li:nth-child(4) a:focus,
+#dock li:nth-child(4) a:hover { fill: var(--primary-link-hover-color); } /* Notion */
+#dock li:nth-child(5) a:focus,
+#dock li:nth-child(5) a:hover { fill: hsl(102, 53%, 52%); } /* Github */
+#dock li:nth-child(6) a:focus,
+#dock li:nth-child(6) a:hover { fill: hsl(14, 89%, 53%); } /* Figma */
 
 #dock svg { height: 1.5rem; }
 
@@ -165,7 +165,7 @@ header svg { height: 4rem; }
 #bookmarks a:hover { color: var(--primary-link-hover-color); }
 
 /*
-    Accessible hiding
+    Accessible hiding for screen readers
     https://webaim.org/techniques/css/invisiblecontent/#techniques
 */ 
 .sr-only {
@@ -178,7 +178,10 @@ header svg { height: 4rem; }
 }
 
 @media screen and (min-width: 48em) {
-    #traichu { width: 40rem; }
+    #traichu {
+        padding: 0;
+        width: 40rem;
+    }
 
     header img,
     header svg { height: 7.5rem; }
@@ -190,4 +193,6 @@ header svg { height: 4rem; }
     }
 
     #bookmarks { flex-direction: row; }
+
+    #bookmarks li:last-child { margin-bottom: 0; }
 }
