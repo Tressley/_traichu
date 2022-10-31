@@ -190,5 +190,3 @@ header svg { height: 4rem; }
 
     #bookmarks { flex-direction: row; }
 }
-
-.slide { animation: slide 4250ms ease-in; }
