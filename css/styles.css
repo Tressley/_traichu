@@ -28,7 +28,8 @@ header {
     justify-content: center;
 }
 
-header img { width: 6rem; }
+header img,
+header svg { height: 4rem; }
 
 #dock ul {
     display: flex;
@@ -178,7 +179,8 @@ header img { width: 6rem; }
         width: 40rem;
     }
 
-    header img { width: 8rem; }
+    header img,
+    header svg { height: 7.5rem; }
 
     #dock ul {
         column-gap: 0;
