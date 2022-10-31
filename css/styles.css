@@ -7,19 +7,18 @@ body {
 
 main {
     align-items: center;
+    animation: fade 0.25s ease-in;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 #traichu {
-    animation: fade 0.125s ease-in;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: var(--space-m);
-    row-gap: var(--space-l);
+    row-gap: var(--spacing-l);
     width: 20rem;
 }
 
@@ -37,30 +36,20 @@ header svg { height: 4rem; }
     flex-wrap: wrap;
     justify-content: center;
     list-style-type: none;
-    column-gap: var(--space-m);
-    row-gap: var(--space-m);
+    column-gap: var(--spacing-m);
+    row-gap: var(--spacing-m);
     padding: 0;
-}
-
-#dock ul li {
-    transition: margin-top 0.125s cubic-bezier(0.455, 0.030, 0.515, 0.955);
-}
-
-#dock ul li:hover {
-    animation: slime 0.75s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-    margin-top: -0.5rem;
-    outline: none;
 }
 
 #dock a {
     display: block;
     fill: var(--primary-link-color);
     transition: fill 0.25s ease-in-out;
-    width: 1.5rem;
 }
 
 #dock a:focus,
 #dock a:hover {
+    animation: slime 0.75s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
     fill: var(--primary-link-hover-color);
     outline: none;
 }
@@ -77,6 +66,8 @@ header svg { height: 4rem; }
 #dock ul li:nth-child(5) a:hover { fill: hsl(102, 53%, 52%); } /* Github */
 #dock ul li:nth-child(6) a:focus,
 #dock ul li:nth-child(6) a:hover { fill: hsl(14, 89%, 53%); } /* Figma */
+
+#dock svg { height: 1.5rem; }
 
 #search {
     display: flex;
@@ -98,7 +89,7 @@ header svg { height: 4rem; }
     font-family: var(--font-sans-serif);
     line-height: 1.5;
     outline: 0.25rem solid transparent;
-    padding: var(--space-m);
+    padding: var(--spacing-m);
     width: 100%;
 }
 
@@ -156,12 +147,12 @@ header svg { height: 4rem; }
     display: flex;
     flex-direction: row;
     line-height: 1;
-    margin-bottom: var(--space-m);
+    margin-bottom: var(--spacing-m);
 }
 
 .favicon {
-    margin-right: var(--space-s);
-    width: 1rem;
+    margin-right: var(--spacing-s);
+    height: 1rem;
 }
 
 #bookmarks a {
@@ -173,11 +164,21 @@ header svg { height: 4rem; }
 #bookmarks a:focus,
 #bookmarks a:hover { color: var(--primary-link-hover-color); }
 
+/*
+    Accessible hiding
+    https://webaim.org/techniques/css/invisiblecontent/#techniques
+*/ 
+.sr-only {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+
 @media screen and (min-width: 48em) {
-    #traichu {
-        padding: var(--space-m);
-        width: 40rem;
-    }
+    #traichu { width: 40rem; }
 
     header img,
     header svg { height: 7.5rem; }
