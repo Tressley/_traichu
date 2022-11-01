@@ -27,7 +27,6 @@ header {
     justify-content: center;
 }
 
-
 #date,
 #location {
     color: var(--primary-link-hover-color);
@@ -39,6 +38,8 @@ header {
     color: var(--primary-link-color);
     text-transform: capitalize;
 }
+
+#weather { text-align: right; }
 
 .separator { margin: 0 0.25rem; }
 
