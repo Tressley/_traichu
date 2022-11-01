@@ -103,7 +103,6 @@ header svg { height: 4.5rem; }
     
     #search input:focus {
         background-color: hsl(var(--color-white-hsl) / 0.05);
-        background-image: var(--svg-search-light-gray);
         outline-color: var(--color-orange);
     }
 }
@@ -118,7 +117,6 @@ header svg { height: 4.5rem; }
     
     #search input:focus {
         background-color: var(--color-white);
-        background-image: var(--svg-search-gray);
         outline-color: var(--color-orange);
     }
 }
@@ -177,6 +175,7 @@ header svg { height: 4.5rem; }
     width: 1px;
 }
 
+/* Responsive Media Queries */
 @media screen and (min-width: 48em) {
     #traichu {
         padding: 0;
