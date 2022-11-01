@@ -80,7 +80,7 @@ header svg { height: 4.5rem; }
 }
 
 #search input {
-    background-color: var(--primary-background-color);
+    background-color: transparent;
     background-position: right 1.25rem center;
     background-repeat: no-repeat;
     background-size: 1.5rem 1.5rem;
@@ -102,7 +102,7 @@ header svg { height: 4.5rem; }
     #search input:hover { border-color: hsl(var(--color-white-hsl) / 0.5); }
     
     #search input:focus {
-        background-color: hsl(var(--color-white-hsl) / 0.05);
+        background-color: hsl(var(--color-white-hsl) / 0.025);
         outline-color: var(--color-orange);
     }
 }

@@ -1,16 +1,16 @@
 :root {
     /*
-    Colors pulled from https://www.colordic.org/w
+    Colors
 
-    HSL(a) is used for better control over colors
+    Values pulled from https://nipponcolors.com
+
+    HSL(a) is used for better control over colors.
     https://css-tricks.com/hsl-hsla-is-great-for-programmatic-color-control/
     https://css-tricks.com/color-alpha-anywhere/
     */
-    --color-black-hsl: 60 22% 7%; /* #16160E */
+    --color-black-hsl: 0 0% 5%; /* #0C0C0C */
     --color-black: hsl(var(--color-black-hsl));
-    --color-off-white-hsl: 60 4% 95%; /* #F3F3F2 */
-    --color-off-white: hsl(var(--color-off-white-hsl));
-    --color-orange-hsl: 26 100% 46%; /* #EC6800 */
+    --color-orange-hsl: 19 88% 53%; /* #F05E1C */
     --color-orange: hsl(var(--color-orange-hsl));
     --color-white-hsl: 60 100% 99%; /* #FFFFFC */
     --color-white: hsl(var(--color-white-hsl));
@@ -47,9 +47,9 @@
 /* Light Mode */
 @media (prefers-color-scheme: light) {
     :root {
-        --primary-background-color: var(--color-off-white);
+        --primary-background-color: hsl(var(--color-black-hsl) / 0.075);
         --primary-font-color: hsl(var(--color-black-hsl) / 0.75);
         --primary-link-color: hsl(var(--color-black-hsl) / 0.75);
-        --primary-link-hover-color: var(--color-orange);
+        --primary-link-hover-color: var(--color-black);
     }
 }
