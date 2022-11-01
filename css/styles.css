@@ -27,6 +27,21 @@ header {
     justify-content: center;
 }
 
+
+#date,
+#location {
+    color: var(--primary-link-hover-color);
+    font-weight: 700;
+}
+
+#time,
+#details {
+    color: var(--primary-link-color);
+    text-transform: capitalize;
+}
+
+.separator { margin: 0 0.25rem; }
+
 header img,
 header svg { height: 4.5rem; }
 
