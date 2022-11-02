@@ -15,6 +15,7 @@ main {
 
 #traichu {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     justify-content: center;
     padding: var(--spacing-l) var(--spacing-m) var(--spacing-m) var(--spacing-m);
@@ -23,8 +24,28 @@ main {
 }
 
 header {
+    align-content: flex-start;
+    align-items: flex-start;
+    animation: fade 1s ease-in;
     display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
     justify-content: center;
+    padding: var(--spacing-m) var(--spacing-m) 0 var(--spacing-m);
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#date-time,
+#weather { flex: 1 1 auto; }
+
+#weather { text-align: right; }
+
+#weather img {
+    display: inline-flex;
+    margin-right: var(--spacing-xs);
+    width: 1.5rem;
 }
 
 #date,
@@ -39,12 +60,22 @@ header {
     text-transform: capitalize;
 }
 
-#weather { text-align: right; }
+#details {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
 
 .separator { margin: 0 0.25rem; }
 
-header img,
-header svg { height: 4.5rem; }
+aside {
+    display: flex;
+    justify-content: space-around;
+}
+
+aside img,
+aside svg { height: 4.5rem; }
 
 #dock ul {
     display: flex;
@@ -91,7 +122,7 @@ header svg { height: 4.5rem; }
 }
 
 #search form {
-    flex-grow: 1;
+    flex: 1 1 auto;
     width: 100%;
 }
 
@@ -198,8 +229,8 @@ header svg { height: 4.5rem; }
         width: 40rem;
     }
 
-    header img,
-    header svg { height: 7.5rem; }
+    aside img,
+    aside svg { height: 7.5rem; }
 
     #dock ul {
         column-gap: 0;
@@ -208,6 +239,4 @@ header svg { height: 4.5rem; }
     }
 
     #bookmarks { flex-direction: row; }
-
-    #bookmarks li:last-child { margin-bottom: 0; }
 }
