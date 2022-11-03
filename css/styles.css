@@ -201,6 +201,8 @@ aside svg { height: 4.5rem; }
 }
 
 #bookmarks a {
+    align-items: center;
+    display: flex;
     color: var(--primary-link-color);
     text-decoration: none;
     transition: color 0.25s ease-in-out;
