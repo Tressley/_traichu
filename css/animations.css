@@ -8,52 +8,14 @@
         to { opacity: 1; }
     }
 
-@-webkit-keyframes flicker {
-    0% { -webkit-filter: contrast(175%); filter: contrast(175%); -webkit-filter: grayscale(75%); filter: grayscale(75%); }
-    10% { -webkit-filter: contrast(100%); filter: contrast(100%); -webkit-filter: grayscale(0%); filter: grayscale(0%); }
-    20% { -webkit-filter: contrast(175%); filter: contrast(175%); -webkit-filter: grayscale(75%); filter: grayscale(75%); }
-    30% { -webkit-filter: contrast(175%); filter: contrast(175%); -webkit-filter: grayscale(75%); filter: grayscale(75%); }
-    40% { -webkit-filter: contrast(100%); filter: contrast(100%); -webkit-filter: grayscale(0%); filter: grayscale(0%); }
-    50% { -webkit-filter: contrast(175%); filter: contrast(175%); -webkit-filter: grayscale(75%); filter: grayscale(75%); }
-    60% { -webkit-filter: contrast(175%); filter: contrast(175%); -webkit-filter: grayscale(75%); filter: grayscale(75%); }
-    70% { -webkit-filter: contrast(100%); filter: contrast(100%); -webkit-filter: grayscale(0%); filter: grayscale(0%); }
-    80% { -webkit-filter: contrast(175%); filter: contrast(175%); -webkit-filter: grayscale(75%); filter: grayscale(75%); }
-    90% { -webkit-filter: contrast(100%); filter: contrast(100%); -webkit-filter: grayscale(0%); filter: grayscale(0%); }
-    100% { -webkit-filter: contrast(100%); filter: contrast(100%); -webkit-filter: grayscale(0%); filter: grayscale(0%); }
-}
-
-    @keyframes flicker {
-        0% { -webkit-filter: contrast(175%); filter: contrast(175%); -webkit-filter: grayscale(25%); filter: grayscale(25%); }
-        10% { -webkit-filter: contrast(100%); filter: contrast(100%); -webkit-filter: grayscale(0%); filter: grayscale(0%); }
-        20% { -webkit-filter: contrast(175%); filter: contrast(175%); -webkit-filter: grayscale(25%); filter: grayscale(25%); }
-        30% { -webkit-filter: contrast(175%); filter: contrast(175%); -webkit-filter: grayscale(25%); filter: grayscale(25%); }
-        40% { -webkit-filter: contrast(100%); filter: contrast(100%); -webkit-filter: grayscale(0%); filter: grayscale(0%); }
-        50% { -webkit-filter: contrast(175%); filter: contrast(175%); -webkit-filter: grayscale(25%); filter: grayscale(25%); }
-        60% { -webkit-filter: contrast(175%); filter: contrast(175%); -webkit-filter: grayscale(25%); filter: grayscale(25%); }
-        70% { -webkit-filter: contrast(100%); filter: contrast(100%); -webkit-filter: grayscale(0%); filter: grayscale(0%); }
-        80% { -webkit-filter: contrast(175%); filter: contrast(175%); -webkit-filter: grayscale(25%); filter: grayscale(25%); }
-        90% { -webkit-filter: contrast(100%); filter: contrast(100%); -webkit-filter: grayscale(0%); filter: grayscale(0%); }
-        100% { -webkit-filter: contrast(100%); filter: contrast(100%); -webkit-filter: grayscale(0%); filter: grayscale(0%); }
-    }
-
-@-webkit-keyframes slide {
-    0% { -webkit-transform: translateX(0); transform: translateX(0); }
-    100% { -webkit-transform: translateX(-1600px); transform: translateX(-1600px); }
-}
-    
-    @keyframes slide {
-        0% { -webkit-transform: translateX(0); transform: translateX(0); }
-        100% { -webkit-transform: translateX(-1600px); transform: translateX(-1600px); }
-    }
-
 @-webkit-keyframes slime {
-	0% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
-	30% { -webkit-transform: scale3d(1.25, 0.75, 1); transform: scale3d(1.25, 0.75, 1); }
-	40% { -webkit-transform: scale3d(0.75, 1.25, 1); transform: scale3d(0.75, 1.25, 1); }
-	50% { -webkit-transform: scale3d(1.15, 0.85, 1); transform: scale3d(1.15, 0.85, 1); }
-	65% { -webkit-transform: scale3d(0.95, 1.05, 1); transform: scale3d(0.95, 1.05, 1); }
-	75% { -webkit-transform: scale3d(1.05, 0.95, 1); transform: scale3d(1.05, 0.95, 1); }
-	100% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
+    0% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
+    30% { -webkit-transform: scale3d(1.25, 0.75, 1); transform: scale3d(1.25, 0.75, 1); }
+    40% { -webkit-transform: scale3d(0.75, 1.25, 1); transform: scale3d(0.75, 1.25, 1); }
+    50% { -webkit-transform: scale3d(1.15, 0.85, 1); transform: scale3d(1.15, 0.85, 1); }
+    65% { -webkit-transform: scale3d(0.95, 1.05, 1); transform: scale3d(0.95, 1.05, 1); }
+    75% { -webkit-transform: scale3d(1.05, 0.95, 1); transform: scale3d(1.05, 0.95, 1); }
+    100% { -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1); }
 }
 
     @keyframes slime {

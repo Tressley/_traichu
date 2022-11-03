@@ -1,46 +1,27 @@
-function dateTime () {
-  const date = new Date()
-  let today = date.toDateString()
-  let time = date.toLocaleTimeString()
-  document.getElementsByName('q')[0].placeholder = today + ' ' + time
-  setTimeout(dateTime, 1000)
+function dateTime() {
+	const date = new Date();
+	let today = date.toDateString();
+	let time = date.toLocaleTimeString();
+	document.getElementById('date-time').innerHTML = '<p id="date">' + today + '</p><p id="time">' + time + '</p>';
+	setTimeout(dateTime, 1000);
 }
 
-var konamiCode = [
-  'ArrowUp',
-  'ArrowUp',
-  'ArrowDown',
-  'ArrowDown',
-  'ArrowLeft',
-  'ArrowRight',
-  'ArrowLeft',
-  'ArrowRight',
-  'b',
-  'a'
-]
-var currentKey = 0
-var keyHandler = function (event) {
-  // If the key isn't in the pattern, or isn't the current key in the pattern, reset
-  if (
-    konamiCode.indexOf(event.key) < 0 ||
-    event.key !== konamiCode[currentKey]
-  ) {
-    currentKey = 0
-    return
-  }
-
-  // Update how much of the pattern is complete
-  currentKey++
-
-  // If complete, add animation class and reset
-  if (konamiCode.length === currentKey) {
-    currentKey = 0
-    document.getElementById('traichu-running').classList.add('slide')
-    setTimeout(function () {
-      document.getElementById('traichu-running').classList.remove('slide')
-    }, 4250)
-  }
+function weatherBalloon(cityID) {
+	var apiKey = 'fad9628260a1bc2ebaaf85a7dfe800d0';
+	fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + apiKey)
+		.then(function(resp) {
+			return resp.json()
+		})
+		.then(function(data) {
+			let weatherIcon = data.weather[0].icon;
+			let tempK = parseFloat(data.main.temp);
+			let tempC = Math.round(tempK - 273.15);
+			let tempF = Math.round((tempK - 273.15) * 1.8) + 32;
+			document.getElementById('weather').innerHTML = '<p id="location">' + data.name + '</p><p id="details" ' + 'title="' + tempF + '&deg;F">' + '<img src="http://openweathermap.org/img/wn/' + weatherIcon + '@2x.png">' + data.weather[0].description + '<span class="separator">|</span>' + tempC + '&deg;C</p>';
+		});
 }
 
-// Listen for keydown events
-document.addEventListener('keydown', keyHandler, false)
+function traichu() {
+	dateTime();
+	weatherBalloon(6254926);
+}

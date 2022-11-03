@@ -14,21 +14,66 @@ main {
 }
 
 #traichu {
-    animation: fade 0.125s ease-in;
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     justify-content: center;
-    padding: var(--space-m);
-    row-gap: var(--space-l);
+    padding: var(--spacing-l) var(--spacing-m) var(--spacing-m) var(--spacing-m);
+    row-gap: var(--spacing-l);
     width: 20rem;
 }
 
 header {
-    display: flex;
+    animation: fade 1s ease-in;
+    display: none;
+    flex: 0 1 auto;
+    flex-direction: row;
     justify-content: center;
+    padding: var(--spacing-m) var(--spacing-m) 0 var(--spacing-m);
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
-header img { width: 6rem; }
+#date-time,
+#weather { flex: 1 1 auto; }
+
+#weather { text-align: right; }
+
+#weather img {
+    display: inline-flex;
+    margin-right: var(--spacing-xs);
+    width: 1.5rem;
+}
+
+#date,
+#location {
+    color: var(--primary-link-hover-color);
+    font-weight: 700;
+}
+
+#time,
+#details {
+    color: var(--primary-link-color);
+    text-transform: capitalize;
+}
+
+#details {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.separator { margin: 0 0.25rem; }
+
+aside {
+    display: flex;
+    justify-content: space-around;
+}
+
+aside img,
+aside svg { height: 4.5rem; }
 
 #dock ul {
     display: flex;
@@ -36,46 +81,38 @@ header img { width: 6rem; }
     flex-wrap: wrap;
     justify-content: center;
     list-style-type: none;
-    column-gap: var(--space-m);
-    row-gap: var(--space-m);
+    column-gap: var(--spacing-m);
+    row-gap: var(--spacing-m);
     padding: 0;
-}
-
-#dock ul li {
-    transition: margin-top 0.125s cubic-bezier(0.455, 0.030, 0.515, 0.955);
-}
-
-#dock ul li:hover {
-    animation: slime 0.75s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-    margin-top: -0.5rem;
-    outline: none;
 }
 
 #dock a {
     display: block;
     fill: var(--primary-link-color);
     transition: fill 0.25s ease-in-out;
-    width: 1.5rem;
 }
 
 #dock a:focus,
 #dock a:hover {
+    animation: slime 0.75s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
     fill: var(--primary-link-hover-color);
     outline: none;
 }
 
-#dock ul li:nth-child(1) a:focus,
-#dock ul li:nth-child(1) a:hover { fill: hsl(5, 81%, 56%); } /* Gmail */
-#dock ul li:nth-child(2) a:focus,
-#dock ul li:nth-child(2) a:hover { fill: hsl(217, 89%, 61%); } /* Google Calendar */
-#dock ul li:nth-child(3) a:focus,
-#dock ul li:nth-child(3) a:hover { fill: hsl(44, 100%, 50%); } /* Google Keep */
-#dock ul li:nth-child(4) a:focus,
-#dock ul li:nth-child(4) a:hover { fill: var(--primary-link-hover-color); } /* Notion */
-#dock ul li:nth-child(5) a:focus,
-#dock ul li:nth-child(5) a:hover { fill: hsl(102, 53%, 52%); } /* Github */
-#dock ul li:nth-child(6) a:focus,
-#dock ul li:nth-child(6) a:hover { fill: hsl(14, 89%, 53%); } /* Figma */
+#dock li:nth-child(1) a:focus,
+#dock li:nth-child(1) a:hover { fill: hsl(5, 81%, 56%); } /* Gmail */
+#dock li:nth-child(2) a:focus,
+#dock li:nth-child(2) a:hover { fill: hsl(217, 89%, 61%); } /* Google Calendar */
+#dock li:nth-child(3) a:focus,
+#dock li:nth-child(3) a:hover { fill: hsl(44, 100%, 50%); } /* Google Keep */
+#dock li:nth-child(4) a:focus,
+#dock li:nth-child(4) a:hover { fill: var(--primary-link-hover-color); } /* Notion */
+#dock li:nth-child(5) a:focus,
+#dock li:nth-child(5) a:hover { fill: hsl(102, 53%, 52%); } /* Github */
+#dock li:nth-child(6) a:focus,
+#dock li:nth-child(6) a:hover { fill: hsl(14, 89%, 53%); } /* Figma */
+
+#dock svg { height: 1.5rem; }
 
 #search {
     display: flex;
@@ -83,12 +120,12 @@ header img { width: 6rem; }
 }
 
 #search form {
-    flex-grow: 1;
+    flex: 1 1 auto;
     width: 100%;
 }
 
 #search input {
-    background-color: var(--primary-background-color);
+    background-color: transparent;
     background-position: right 1.25rem center;
     background-repeat: no-repeat;
     background-size: 1.5rem 1.5rem;
@@ -97,7 +134,7 @@ header img { width: 6rem; }
     font-family: var(--font-sans-serif);
     line-height: 1.5;
     outline: 0.25rem solid transparent;
-    padding: var(--space-m);
+    padding: var(--spacing-m);
     width: 100%;
 }
 
@@ -110,10 +147,12 @@ header img { width: 6rem; }
     #search input:hover { border-color: hsl(var(--color-white-hsl) / 0.5); }
     
     #search input:focus {
-        background-color: hsl(var(--color-white-hsl) / 0.05);
-        background-image: var(--svg-search-light-gray);
+        background-color: hsl(var(--color-white-hsl) / 0.025);
         outline-color: var(--color-orange);
     }
+
+    #bookmarks a:focus,
+    #bookmarks a:hover { background-color: hsl(var(--color-white-hsl) / 0.025); }
 }
 
 @media (prefers-color-scheme: light) {
@@ -126,9 +165,11 @@ header img { width: 6rem; }
     
     #search input:focus {
         background-color: var(--color-white);
-        background-image: var(--svg-search-gray);
         outline-color: var(--color-orange);
     }
+
+    #bookmarks a:focus,
+    #bookmarks a:hover { background-color: hsl(var(--color-black-hsl) / 0.075); }
 }
 
 #search input:active,
@@ -155,30 +196,53 @@ header img { width: 6rem; }
     display: flex;
     flex-direction: row;
     line-height: 1;
-    margin-bottom: var(--space-m);
 }
 
 .favicon {
-    margin-right: var(--space-s);
-    width: 1rem;
+    margin-right: var(--spacing-s);
+    height: 1rem;
 }
 
 #bookmarks a {
+    align-items: center;
+    border-radius: 0.25rem;
+    display: flex;
     color: var(--primary-link-color);
+    padding: var(--spacing-s);
     text-decoration: none;
-    transition: color 0.25s ease-in-out;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
 #bookmarks a:focus,
-#bookmarks a:hover { color: var(--primary-link-hover-color); }
+#bookmarks a:hover {
+    color: var(--primary-link-hover-color);
+    outline: none;
+}
 
+/*
+    Accessible hiding for screen readers
+    https://webaim.org/techniques/css/invisiblecontent/#techniques
+*/ 
+.sr-only {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+
+/* Responsive Media Queries */
 @media screen and (min-width: 48em) {
+    header { display: flex; }
+    
     #traichu {
-        padding: var(--space-m);
-        width: 40rem;
+        padding: 0;
+        width: 45rem; /* 720px */
     }
 
-    header img { width: 8rem; }
+    aside img,
+    aside svg { height: 7.5rem; }
 
     #dock ul {
         column-gap: 0;
@@ -188,5 +252,3 @@ header img { width: 6rem; }
 
     #bookmarks { flex-direction: row; }
 }
-
-.slide { animation: slide 4250ms ease-in; }
