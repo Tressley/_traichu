@@ -24,8 +24,6 @@ main {
 }
 
 header {
-    align-content: flex-start;
-    align-items: flex-start;
     animation: fade 1s ease-in;
     display: none;
     flex: 0 1 auto;
