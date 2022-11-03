@@ -27,7 +27,7 @@ header {
     align-content: flex-start;
     align-items: flex-start;
     animation: fade 1s ease-in;
-    display: flex;
+    display: none;
     flex: 0 1 auto;
     flex-direction: row;
     justify-content: center;
@@ -224,9 +224,11 @@ aside svg { height: 4.5rem; }
 
 /* Responsive Media Queries */
 @media screen and (min-width: 48em) {
+    header { display: flex; }
+    
     #traichu {
         padding: 0;
-        width: 40rem;
+        width: 45rem; /* 720px */
     }
 
     aside img,
