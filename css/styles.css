@@ -150,6 +150,9 @@ aside svg { height: 4.5rem; }
         background-color: hsl(var(--color-white-hsl) / 0.025);
         outline-color: var(--color-orange);
     }
+
+    #bookmarks a:focus,
+    #bookmarks a:hover { background-color: hsl(var(--color-white-hsl) / 0.025); }
 }
 
 @media (prefers-color-scheme: light) {
@@ -164,6 +167,9 @@ aside svg { height: 4.5rem; }
         background-color: var(--color-white);
         outline-color: var(--color-orange);
     }
+
+    #bookmarks a:focus,
+    #bookmarks a:hover { background-color: hsl(var(--color-black-hsl) / 0.075); }
 }
 
 #search input:active,
@@ -190,7 +196,6 @@ aside svg { height: 4.5rem; }
     display: flex;
     flex-direction: row;
     line-height: 1;
-    margin-bottom: var(--spacing-m);
 }
 
 .favicon {
@@ -200,14 +205,19 @@ aside svg { height: 4.5rem; }
 
 #bookmarks a {
     align-items: center;
+    border-radius: 0.25rem;
     display: flex;
     color: var(--primary-link-color);
+    padding: var(--spacing-s);
     text-decoration: none;
-    transition: color 0.25s ease-in-out;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
 #bookmarks a:focus,
-#bookmarks a:hover { color: var(--primary-link-hover-color); }
+#bookmarks a:hover {
+    color: var(--primary-link-hover-color);
+    outline: none;
+}
 
 /*
     Accessible hiding for screen readers
