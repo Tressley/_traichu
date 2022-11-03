@@ -1,11 +1,7 @@
 ![traichu](favicon-32x32.png?raw=true)
 
-> **trai´chu,** _n_. A simple, semantic start page built with HTML 5, CSS 3, and JavaScript.
+> **trai´chu,** _n_. A simple, semantic start page built with HTML, CSS, and a mouse-sized bit of JavaScript.
+ 
+**_traichu's** markup is [valid](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftressley.github.io%2F_traichu%2Findex.html) and adheres to HTML semantics. [Traditional Japanese](https://www.nipponcolors.com), [WCAG 2.0](https://www.w3.org/TR/WCAG20/) compliant colors make up the color palette. The monospace font is [Inconsolata](https://fonts.google.com/specimen/Inconsolata) loaded via [Google Fonts](https://fonts.google.com). Icons are [inline SVGs](https://css-tricks.com/pretty-good-svg-icon-system/), [DuckDuckGo's API](https://icons.duckduckgo.com/ip3/duckduckgo.com.ico) delivers the favicons, and [OpenWeather's API](https://openweathermap.org) provides the weather forecast and icons. Vanilla JavaScript and CSS handle all interactivity.
 
-This start page utilizes technologies such as [DuckDuckGo's favicon API](https://icons.duckduckgo.com/ip3/duckduckgo.com.ico) and [inline SVGs](https://css-tricks.com/pretty-good-svg-icon-system/) to handle the images (with the exception of the traichu sprite).
-
-The color palette is composed of contrast accessibile, [WCAG 2.0](https://www.w3.org/TR/WCAG20/) compliant colors listed in [Japanese Industrial Standards](https://ja.wikipedia.org/wiki/JIS%E6%85%A3%E7%94%A8%E8%89%B2%E5%90%8D). The font is [Inconsolata](https://fonts.google.com/specimen/Inconsolata) loaded via [Google Fonts](https://fonts.google.com).
-
-It uses [DuckDuckGo](https://duckduckgo.com)'s search engine in an effort to increase privacy and anonymity.
-
-All interactions are handled via JavaScript and CSS animations.
+[DuckDuckGo](https://duckduckgo.com) is the default search engine because privacy is important.
