@@ -65,7 +65,7 @@ header {
     justify-content: flex-end;
 }
 
-.separator { margin: 0 0.25rem; }
+.separator { margin: 0 var(--spacing-xs); }
 
 aside {
     display: flex;
@@ -89,7 +89,7 @@ aside svg { height: 4.5rem; }
 #dock a {
     display: block;
     fill: var(--primary-link-color);
-    transition: fill 0.25s ease-in-out;
+    transition: fill 0.125s ease-in-out;
 }
 
 #dock a:focus,
@@ -152,7 +152,7 @@ aside svg { height: 4.5rem; }
     }
 
     #bookmarks a:focus,
-    #bookmarks a:hover { background-color: hsl(var(--color-white-hsl) / 0.025); }
+    #bookmarks a:hover { background-color: hsl(var(--color-white-hsl) / 0.05); }
 }
 
 @media (prefers-color-scheme: light) {
@@ -168,7 +168,7 @@ aside svg { height: 4.5rem; }
     #search input:focus { outline-color: var(--color-orange); }
 
     #bookmarks a:focus,
-    #bookmarks a:hover { background-color: hsl(var(--color-orange-hsl) / 0.125); }
+    #bookmarks a:hover { background-color: hsl(var(--color-black-hsl) / 0.05); }
 }
 
 #search input:active,
@@ -195,6 +195,7 @@ aside svg { height: 4.5rem; }
     display: flex;
     flex-direction: row;
     line-height: 1;
+    margin-bottom: var(--spacing-xs);
 }
 
 .favicon {
@@ -209,7 +210,7 @@ aside svg { height: 4.5rem; }
     color: var(--primary-link-color);
     padding: var(--spacing-s);
     text-decoration: none;
-    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    transition: background-color 0.125s ease-in-out, color 0.125s ease-in-out;
 }
 
 #bookmarks a:focus,
