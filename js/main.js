@@ -17,7 +17,7 @@ function weatherBalloon(cityID) {
 			let tempK = parseFloat(data.main.temp);
 			let tempC = Math.round(tempK - 273.15);
 			let tempF = Math.round((tempK - 273.15) * 1.8) + 32;
-			document.getElementById('weather').innerHTML = '<p id="location">' + data.name + '</p><p id="details" ' + 'title="' + tempF + '&deg;F">' + '<img src="http://openweathermap.org/img/wn/' + weatherIcon + '.png">' + data.weather[0].description + '<span class="separator">|</span>' + tempC + '&deg;C</p>';
+			document.getElementById('weather').innerHTML = '<p id="location">' + data.name + '</p><p id="details" ' + 'title="' + tempF + '&deg;F">' + '<img src="https://openweathermap.org/img/wn/' + weatherIcon + '.png">' + data.weather[0].description + '<span class="separator">|</span>' + tempC + '&deg;C</p>';
 		});
 }
 
