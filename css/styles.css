@@ -156,6 +156,8 @@ aside svg { height: 4.5rem; }
 }
 
 @media (prefers-color-scheme: light) {
+    #weather img { filter: drop-shadow(0 0 0 hsl(var(--color-black-hsl) / 0.75)); }
+
     #search input {
         background-image: var(--svg-search-light-gray);
         border: 0.125rem solid hsl(var(--color-black-hsl) / 0.25);
@@ -163,13 +165,10 @@ aside svg { height: 4.5rem; }
 
     #search input:hover { border-color: hsl(var(--color-black-hsl) / 0.5); }
     
-    #search input:focus {
-        background-color: var(--color-white);
-        outline-color: var(--color-orange);
-    }
+    #search input:focus { outline-color: var(--color-orange); }
 
     #bookmarks a:focus,
-    #bookmarks a:hover { background-color: hsl(var(--color-black-hsl) / 0.075); }
+    #bookmarks a:hover { background-color: hsl(var(--color-orange-hsl) / 0.125); }
 }
 
 #search input:active,
