@@ -144,12 +144,7 @@ aside svg { height: 4.5rem; }
         border: 0.125rem solid hsl(var(--color-white-hsl) / 0.25);
     }
     
-    #search input:hover { border-color: hsl(var(--color-white-hsl) / 0.5); }
-    
-    #search input:focus {
-        background-color: hsl(var(--color-white-hsl) / 0.025);
-        outline-color: var(--color-orange);
-    }
+    #search input:hover { border-color: hsl(var(--color-white-hsl) / 0.5); }    
 
     #bookmarks a:focus,
     #bookmarks a:hover { background-color: hsl(var(--color-white-hsl) / 0.05); }
@@ -164,15 +159,16 @@ aside svg { height: 4.5rem; }
     } 
 
     #search input:hover { border-color: hsl(var(--color-black-hsl) / 0.5); }
-    
-    #search input:focus { outline-color: var(--color-orange); }
 
     #bookmarks a:focus,
     #bookmarks a:hover { background-color: hsl(var(--color-black-hsl) / 0.05); }
 }
 
-#search input:active,
-#search input:focus { border-color: transparent; }
+#search input:focus {
+    background-color: hsl(var(--color-white-hsl) / 0.025);
+    border-color: var(--color-orange);
+    outline-color: hsl(var(--color-orange-hsl) / 0.25);
+}
 
 #bookmarks {
     align-items: flex-start;
@@ -210,7 +206,6 @@ aside svg { height: 4.5rem; }
     color: var(--primary-link-color);
     padding: var(--spacing-s);
     text-decoration: none;
-    transition: background-color 0.125s ease-in-out, color 0.125s ease-in-out;
 }
 
 #bookmarks a:focus,
