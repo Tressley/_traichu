@@ -6,6 +6,18 @@
 
 [DuckDuckGo](https://duckduckgo.com) is the default search engine because privacy is important 'round here.
 
-![_traichu's dark mode](https://i.imgur.com/oF2gwFv.png)
+⚠️ **You will need to generate your own OpenWeather API key!**
+1. [Register for an OpenWeather account](https://home.openweathermap.org/users/sign_up) (OpenWeather will generate a default API key)
+2. Sign in and navigate to Username > API keys and copy the key
+3. Paste the key into [`line 10`](https://github.com/Tressley/_traichu/blob/120e06827765b09045d417127c19c91c5a121dc5/js/main.js#L10) of `main.js`
 
-![_traichu's light mode](https://i.imgur.com/AMzEphW.png)
+**How to update your city**
+1. Find your city using [OpenWeather's search](https://openweathermap.org/find)
+2. Copy the city ID from the end of the URL
+> `https://openweathermap.org/city/1850147` 🠆 `1850147`
+3. Paste the city ID into [`line 26`](https://github.com/Tressley/_traichu/blob/120e06827765b09045d417127c19c91c5a121dc5/js/main.js#L26) of `main.js`
+
+
+![_traichu's dark mode](https://i.imgur.com/ncQcCGy.jpg)
+
+![_traichu's light mode](https://i.imgur.com/Gst8wfz.jpg)
