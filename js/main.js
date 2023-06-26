@@ -25,3 +25,5 @@ function traichu() {
 	dateTime();
 	weatherBalloon(1850147); //OpenWeather city ID
 }
+
+window.addEventListener('DOMContentLoaded', traichu, false);
